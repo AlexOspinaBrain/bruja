@@ -1,0 +1,12 @@
+update facility_directory set position = 1 where id = 450;
+update facility_directory set position = 2 where id = 452;
+update facility_directory set position = 3 where id = 456;
+update facility_directory set position = 4 where id = 457;
+update facility_directory set position = 5 where id = 458;
+update facility_directory set position = 6 where id = 464;
+update facility_directory set position = 7 where id = 1054;
+update facility_directory set position = 8 where id = 1055;
+update facility_directory set position = 9 where id = 1056;
+update facility_directory set position = 10 where id = 1057;
+update facility_directory set position = 11 where id = 1058;
+update facility_directory set position = 12 where id = 1059;
