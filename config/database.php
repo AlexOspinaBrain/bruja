@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-
+$DATABASE_URL=parse_url('postgres://egadatxdweiags:c23bdc2229ba01a35f62b0f54cd64938408ca50adb5e91aefb11535c6e444a1b@ec2-52-70-45-163.compute-1.amazonaws.com:5432/dfjsu4cqdkhmah');
 return [
 
     /*
@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
