@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateTaskRequest;
 use App\Models\Ciudadano;
 use App\Models\Day;
 use App\Models\Task;
+use App\Services\AgendaHandler;
 
 class TaskController extends Controller
 {
@@ -112,9 +113,21 @@ class TaskController extends Controller
      * @param  \App\Models\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function agenda()
+    public function agenda(AgendaHandler $agendaHandler)
+   
     {
-        $tasks = Task::all();
-        return response()->view('tareas.agenda',['tasks' => $tasks]) ;
+        list($lunes, $martes, $miercoles, 
+            $jueves, $viernes, $sabado, $domingo) = $agendaHandler->agendaService();
+
+        return response()->view('tareas.agenda',[
+            'lunes' => $lunes,
+            'martes' => $martes,
+            'miercoles' => $miercoles,
+            'jueves' => $jueves,
+            'viernes' => $viernes,
+            'sabado' => $sabado,
+            'domingo' => $domingo,
+            ]) ;
+        
     }    
 }
