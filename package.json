@@ -3,7 +3,9 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "postinstall": "npm run prod"
+    },
+    "engines": {
+        "node": "16.x"
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
