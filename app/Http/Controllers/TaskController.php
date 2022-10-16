@@ -119,6 +119,9 @@ class TaskController extends Controller
         list($lunes, $martes, $miercoles, 
             $jueves, $viernes, $sabado, $domingo) = $agendaHandler->agendaService();
 
+        $daysWeek = ['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
+        $day = $daysWeek[date('w')];
+
         return response()->view('tareas.agenda',[
             'lunes' => $lunes,
             'martes' => $martes,
@@ -127,6 +130,7 @@ class TaskController extends Controller
             'viernes' => $viernes,
             'sabado' => $sabado,
             'domingo' => $domingo,
+            'diaActual' => $day,
             ]) ;
         
     }    
